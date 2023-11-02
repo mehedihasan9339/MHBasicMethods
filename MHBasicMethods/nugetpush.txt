@@ -1,0 +1,7 @@
+oy2bskzpufrimxvr5tda5rklwi7vg7fubp65ttw5tiajaa
+
+dotnet nuget push "C:\MyDrive\MHBasicMethods\MHBasicMethods\bin\Release\MHBasicMethods.1.0.1.nupkg" --api-key "oy2bskzpufrimxvr5tda5rklwi7vg7fubp65ttw5tiajaa" --source https://api.nuget.org/v3/index.json
+
+dotnet pack -c Release
+
+

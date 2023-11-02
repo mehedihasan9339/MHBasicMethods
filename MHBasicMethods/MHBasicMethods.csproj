@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>1.0.2</Version>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Title>MHBasicMethods</Title>
+    <Authors>Mehedi Hasan</Authors>
+    <Description>You will get basic methods here</Description>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+</Project>
