@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MHBasicMethods.Methods
+namespace MHBasicMethods
 {
     public class MHRandom
     {

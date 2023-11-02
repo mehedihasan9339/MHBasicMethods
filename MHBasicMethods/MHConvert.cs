@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MHBasicMethods.Methods
+namespace MHBasicMethods
 {
     public class MHConvert
     {

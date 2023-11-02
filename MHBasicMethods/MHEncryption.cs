@@ -4,7 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MHBasicMethods.Methods
+namespace MHBasicMethods
 {
     public class MHEncryption
     {

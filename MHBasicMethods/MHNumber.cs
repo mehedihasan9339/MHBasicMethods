@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MHBasicMethods.Methods
+namespace MHBasicMethods
 {
     public class MHNumber
     {
@@ -166,7 +166,7 @@ namespace MHBasicMethods.Methods
 
         public int FindLCM(int a, int b)
         {
-            return (a * b) / FindGCD(a, b);
+            return a * b / FindGCD(a, b);
         }
 
 
@@ -261,7 +261,7 @@ namespace MHBasicMethods.Methods
 
         public bool IsPowerOfTwo(int number)
         {
-            return (number != 0) && ((number & (number - 1)) == 0);
+            return number != 0 && (number & number - 1) == 0;
         }
 
 

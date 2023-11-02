@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MHBasicMethods.Methods
+namespace MHBasicMethods
 {
     public class MHDate
     {
@@ -37,7 +37,7 @@ namespace MHBasicMethods.Methods
 
         public bool IsLeapYear(int year)
         {
-            return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+            return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
         }
 
 
