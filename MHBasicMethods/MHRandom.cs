@@ -26,7 +26,7 @@ namespace MHBasicMethods
 
 
 
-        public string GenerateRandomUniqueCode(string prefix, int length)
+        public string GenerateRandomUniqueCodeWithPrefix(string prefix, int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             Random random = new Random();
@@ -145,29 +145,6 @@ namespace MHBasicMethods
             return $"{prefix}{middlePart}{suffix}";
         }
 
-
-
-
-        public string GenerateRandomStringWithSeparators(int length, string separators, int separatorInterval)
-        {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-            Random random = new Random();
-            StringBuilder result = new StringBuilder();
-
-            for (int i = 0; i < length; i++)
-            {
-                if (i > 0 && i % separatorInterval == 0)
-                {
-                    result.Append(separators[random.Next(separators.Length)]);
-                }
-                else
-                {
-                    result.Append(chars[random.Next(chars.Length)]);
-                }
-            }
-
-            return result.ToString();
-        }
 
 
 

@@ -1,13 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.0.3</Version>
+    <Version>1.0.6</Version>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <Title>MHBasicMethods</Title>
     <Authors>Mehedi Hasan</Authors>
-    <Description>You will get basic methods here</Description>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
+
+  <!-- Read description from external file and update .nuspec during build -->
+  <Target Name="UpdateDescription" BeforeTargets="Pack">
+    <PropertyGroup>
+      <DescriptionFilePath>$(ProjectDir)\description.txt</DescriptionFilePath>
+    </PropertyGroup>
+
+    <ReadLinesFromFile File="$(DescriptionFilePath)">
+      <Output TaskParameter="Lines" PropertyName="Description" />
+    </ReadLinesFromFile>
+
+    <PropertyGroup>
+      <Description><![CDATA[$(Description)]]></Description>
+    </PropertyGroup>
+
+    <!-- Update .nuspec file -->
+    <FileUpdate Files="$(MSBuildProjectDirectory)\$(ProjectName).nuspec" Regex="&lt;description&gt;&lt;!\[CDATA\[\s*(.*?)\s*\]\]&gt;&lt;/description&gt;" ReplacementText="&lt;description&gt;&lt;!\[CDATA\[$(Description)\]\]&gt;&lt;/description&gt;" />
+  </Target>
 
 </Project>

@@ -256,6 +256,19 @@ namespace MHBasicMethods
 
 
 
+        public int BinaryToDecimal(string binaryNumber)
+        {
+            int decimalNumber = 0;
+            int binaryBase = 2;
+
+            for (int i = binaryNumber.Length - 1, j = 0; i >= 0; i--, j++)
+            {
+                int bit = int.Parse(binaryNumber[i].ToString());
+                decimalNumber += bit * (int)Math.Pow(binaryBase, j);
+            }
+
+            return decimalNumber;
+        }
 
 
 
