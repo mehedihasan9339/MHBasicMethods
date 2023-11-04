@@ -71,7 +71,26 @@ namespace MHBasicMethods
 
 
 
+        public int CalculateDaysBetweenDates(DateTime startDate, DateTime endDate)
+        {
+            int days = 0;
+            while (startDate.Date < endDate.Date)
+            {
+                days++;
+                startDate = startDate.AddDays(1);
+            }
+            return days;
+        }
 
+
+        public void CalculateAgeDetailed(DateTime birthDate, DateTime currentDate, out int days, out int hours, out int minutes, out int seconds)
+        {
+            TimeSpan age = currentDate - birthDate;
+            days = age.Days;
+            hours = age.Hours;
+            minutes = age.Minutes;
+            seconds = age.Seconds;
+        }
 
 
 
