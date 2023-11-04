@@ -1,6 +1,34 @@
 ## MHConvert (to use this initialize MHConvert)
-    * double FahrenheitToCelsius(double fahrenheit)
-    * double CelsiusToFahrenheit(double celsius)
+**Method 1**
+```csharp
+* double FahrenheitToCelsius(double fahrenheit)
+```
+
+**Example**
+```csharp
+using MHBasicMethods;
+
+MHConvert mHConvert = new MHConvert();
+
+Console.WriteLine("273 Fahrenheit is " + mHConvert.FahrenheitToCelsius(273) + " Celsius");
+
+//Result: 273 Fahrenheit is 133.88888888888889 Celsius
+```
+
+**Method 2**
+```csharp
+* double CelsiusToFahrenheit(double celsius)
+```
+**Example**
+```csharp
+using MHBasicMethods;
+
+MHConvert mHConvert = new MHConvert();
+
+Console.WriteLine("273 Celsius is " + mHConvert.CelsiusToFahrenheit(212) + " Fahrenheit");
+
+//Result: 273 Celsius is 413.6 Fahrenheit
+```
 
 ## MHDate (to use this initialize MHDate)
     * int CalculateAge(DateTime birthdate)
