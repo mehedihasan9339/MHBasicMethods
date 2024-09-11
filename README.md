@@ -1,5 +1,11 @@
 # Basic C# Methods (V 1.1.0)
 
+## Package Info
+https://www.nuget.org/packages/MHBasicMethods
+```cmd
+Install-Package MHBasicMethods -Version 1.1.0
+```
+
 ## MHConvert (to use this initialize MHConvert)
 #### _MHConvert mhConvert = new MHConvert()_
 ```csharp
